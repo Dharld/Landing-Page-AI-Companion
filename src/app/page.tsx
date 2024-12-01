@@ -38,7 +38,7 @@ export default function LandingPage() {
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button size="lg" variant="default">
                   <a
-                    href="https://github.com/SP100-CampusAICompanion-Project"
+                    href="https://github.com/SP100UniversityCompanion/SP100-UniversityAICompanion"
                     target="_blank"
                   >
                     See Github
