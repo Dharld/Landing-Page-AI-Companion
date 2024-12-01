@@ -1,16 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Download,
-  Star,
-  Smartphone,
-  Zap,
-  Lock,
-  Globe,
-  Play,
-} from "lucide-react";
+import { Smartphone, Zap, Lock, Globe } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -141,7 +132,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-xl font-bold text-center">Download</h3>
                 <p className="text-center text-muted-foreground">
-                  Get our app from your device's app store.
+                  Get our app from your device`&apos;`s app store.
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-4">
