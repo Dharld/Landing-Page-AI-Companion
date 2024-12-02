@@ -1,7 +1,47 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Smartphone, Zap, Lock, Globe } from "lucide-react";
+import { Smartphone, Zap, Lock, Globe, Download } from "lucide-react";
+
+const members = [
+  {
+    name: "Dorian Taponzing",
+    image: "/assets/Breez1.jpeg",
+    role: "Team Lead",
+  },
+  {
+    name: "Yann Djoumessi",
+    image: "/assets/Yann.jpeg",
+    role: "Developer",
+  },
+
+  {
+    name: "Takou Tene",
+    image: "/assets/CV.jpeg",
+    role: "Project Owner and Developer",
+  },
+  {
+    name: "Leopold Sokoudjou",
+    image: "/assets/Leo.jpeg",
+    role: "Developer and Tester",
+  },
+  {
+    name: "Koodjo Manuella",
+    image: "/assets/Manu.jpeg",
+    role: "Documentation",
+  },
+];
+
+type MemberProps = { name: string; image: string; role: string };
+const Member = ({ name, image, role }: MemberProps) => (
+  <div className="flex flex-col">
+    <div className="w-[256px] h-[256px] rounded-full overflow-hidden">
+      <img src={image} className="object-cover aspect-square" alt="" />
+    </div>
+    <div className="font-bold text-lg mt-4">{name}</div>
+    <div>{role}</div>
+  </div>
+);
 
 export default function LandingPage() {
   return (
@@ -35,13 +75,37 @@ export default function LandingPage() {
                   from math to literature.
                 </p>
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <div className="flex flex-col gap-2 min-[600px]:flex-row">
                 <Button size="lg" variant="default">
                   <a
                     href="https://github.com/SP100UniversityCompanion/SP100-UniversityAICompanion"
                     target="_blank"
                   >
                     See Github
+                  </a>
+                </Button>
+                <Button size="lg" variant="default">
+                  <a
+                    href="assets/SP100-UniversityAICompanion-FinalReport.docx"
+                    target="_blank"
+                    className="flex items-center gap-2"
+                  >
+                    <i>
+                      <Download />
+                    </i>
+                    <span>Download Report</span>
+                  </a>
+                </Button>
+                <Button size="lg" variant="default">
+                  <a
+                    href="assets/SP-100-University AI Companion-Presentation.pptx"
+                    target="_blank"
+                    className="flex items-center gap-2"
+                  >
+                    <i>
+                      <Download />
+                    </i>
+                    <span>Download Powerpoint</span>
                   </a>
                 </Button>
               </div>
@@ -154,6 +218,16 @@ export default function LandingPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+        <section id="teams" className="w-full py-12">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
+            Team
+          </h2>
+          <div className="mx-auto w-fit text-center flex flex-col flex-wrap max-w-[800px] gap-2 md:gap-4 md:flex-row justify-space-between">
+            {members.map((member, index) => (
+              <Member key={index} {...member} />
+            ))}
           </div>
         </section>
       </main>
