@@ -146,14 +146,12 @@ export default function LandingPage() {
             </h2>
             <div className="max-w-3xl mx-auto">
               <div className="relative aspect-video rounded-xl overflow-hidden">
-                <video className="w-full h-full object-cover" controls loop>
-                  <source src="/assets/ai-submission.mp4" type="video/mp4" />
-                  <source
-                    src="https://drive.google.com/file/d/1HjnD45yulHVy-Rx13N5qv23BSNEustUL/view?usp=sharing"
-                    type="video/mp4"
-                  />{" "}
-                  Your browser does not support the video tag.
-                </video>
+                <iframe
+                  src="https://drive.google.com/file/d/1HjnD45yulHVy-Rx13N5qv23BSNEustUL/preview"
+                  className="w-full h-full"
+                  allow="autoplay"
+                  allowFullScreen
+                ></iframe>
               </div>
               <p className="text-center text-muted-foreground mt-6">
                 Watch how our AI companion helps students excel in their studies
