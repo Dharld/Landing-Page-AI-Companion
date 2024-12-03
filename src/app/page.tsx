@@ -86,7 +86,7 @@ export default function LandingPage() {
                 </Button>
                 <Button size="lg" variant="default">
                   <a
-                    href="assets/SP100-UniversityAICompanion-FinalReport.docx"
+                    href="https://docs.google.com/document/d/1KQxI1MTcrojQjQ5djSPXxiVskRRD6-i7/edit?usp=sharing&ouid=100924594975220420809&rtpof=true&sd=true"
                     target="_blank"
                     className="flex items-center gap-2"
                   >
@@ -98,7 +98,7 @@ export default function LandingPage() {
                 </Button>
                 <Button size="lg" variant="default">
                   <a
-                    href="assets/SP-100-University AI Companion-Presentation.pptx"
+                    href="https://docs.google.com/presentation/d/1YMtWCzMtGuia9QPNwyaNVv-oomZu-Hs4/edit?usp=sharing&ouid=100924594975220420809&rtpof=true&sd=true"
                     target="_blank"
                     className="flex items-center gap-2"
                   >
@@ -129,6 +129,28 @@ export default function LandingPage() {
                   <source
                     src="/assets/ai-submission.webm"
                     type="video/webm"
+                  />{" "}
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-center text-muted-foreground mt-6">
+                Watch how our AI companion helps students excel in their studies
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-8 md:py-12 lg:py-24 bg-gray-100">
+          <div className="container px-4 md:px-6 mx-auto">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">
+              Powerpoint presentation video
+            </h2>
+            <div className="max-w-3xl mx-auto">
+              <div className="relative aspect-video rounded-xl overflow-hidden">
+                <video className="w-full h-full object-cover" controls loop>
+                  <source src="/assets/ai-submission.mp4" type="video/mp4" />
+                  <source
+                    src="https://drive.google.com/file/d/1HjnD45yulHVy-Rx13N5qv23BSNEustUL/view?usp=sharing"
+                    type="video/mp4"
                   />{" "}
                   Your browser does not support the video tag.
                 </video>
